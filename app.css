@@ -397,6 +397,11 @@ footer .credit a {
     .contact .row form {
         padding-top: 0;
     }
+
+    .hero .content {
+        padding: 1.4rem 5%;
+        max-width: 30rem;
+    }
 }
 /* Mobile */
 @media (max-width: 450px) {

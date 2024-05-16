@@ -8,15 +8,19 @@ hamburgerMenu.addEventListener('click', () => {
 
 // Click di luar sidebar untuk menghilangkan nav
 document.addEventListener('click', (e) => {
-    if(!hamburgerMenu.contains(e.target) && !navbarNav.contains(e.target)) {
+    if (!hamburgerMenu.contains(e.target) && !navbarNav.contains(e.target)) {
         navbarNav.classList.remove('active');
     };
-}); 
+});
 
 // Kolom pencarian
 const search = document.querySelector('#search');
 search.addEventListener('click', () => {
-    search = prompt('Mesin Pencarian');
+    let search = prompt('Mesin Pencarian');
+    while (!search) {
+        search = prompt('Harus masukkan sesuatu');
+    };
+    alert('Pesan anda kami terima');
 });
 
 // Generate random color 
@@ -33,4 +37,19 @@ const generateRandomColor = () => {
 
     return `rgb(${r}, ${g}, ${b})`;
 }
+
+// Memunculkan heading menggunakan interval
+// const tittle = "Selamat Datang";
+// const heading = document.querySelector('#heading');
+// let count = 0;
+
+// const interval = setInterval(() => {
+//     if(count == tittle.length) {
+//         count = 0;
+//         heading.innerText = "";
+//     } else {
+//         heading.innerText += tittle[count];
+//         count++;
+//     }
+// }, 200);
 
